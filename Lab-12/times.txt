@@ -1,0 +1,4 @@
+-why= semaphore wrappers eliminate race condition of the two threads.
+-time for task 2: 0.55s user 0.26s system 104% cpu 0.770 total
+-time for task 3: 0.52s user 0.25s system 124% cpu 0.615 total
+-speculate why: task 2 is slower as the two will be waiting on the global POTENTIALLY every iteration. In task three they will only wait potentially once, when the final sum is being calculated. the sem wrapper for the loca value is not even necessary, just legacy code for the scope of this lab.
